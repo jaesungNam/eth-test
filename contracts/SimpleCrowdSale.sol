@@ -71,7 +71,7 @@ contract SimpleCrowdSale is Ownable {
 
     // weiTokenPrice 가 100 이면 100wei === 1 SimpleCoin 임 
     // 어떤 투자자가 1000wei 투자하면 10 SimpleCoin 을 민팅받음
-    function calculateNumberOfTokens(uint256 _investment) internal view returns (uint256) {
+    function calculateNumberOfTokens(uint256 _investment) virtual internal returns (uint256) {
         return _investment / weiTokenPrice;        
     }
 

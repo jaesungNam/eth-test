@@ -19,16 +19,11 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "_weiTokenPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
 						"name": "_etherInvestmentObjective",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "nonpayable",
+				"stateMutability": "payable",
 				"type": "constructor"
 			},
 			{
@@ -96,6 +91,19 @@
 						"internalType": "contract ReleasableSimpleCoin",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "currentTrancheLevel",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -233,6 +241,30 @@
 				"type": "function"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "trancheStructure",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "weiHighLimit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "weiTokenPrice",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "weiInvestmentObjective",
 				"outputs": [
@@ -272,7 +304,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleCrowdSale.sol": "SimpleCrowdSale"
+			"contracts/TranchePricingCrowdsale.sol": "TranchePricingCrowdsale"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -316,6 +348,14 @@
 			"urls": [
 				"bzz-raw://03f559c16035cedbdb3b615295ed56aa3079b87c9155ca1bef45d4efca82aeeb",
 				"dweb:/ipfs/QmRA1i9zTiFUh3ktkUycWSA3FpzbUzKLxpThiEjTxvc2oz"
+			]
+		},
+		"contracts/TranchePricingCrowdsale.sol": {
+			"keccak256": "0xa9bc2aa69573d0ee019563565e30b4cbcd7cefc21e093d94a67896d8ce5b0bef",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ac342117c61a8e0413dd50ac97c132207c6d6e2372cf69bae9e97ccf59a29464",
+				"dweb:/ipfs/QmNmNL2zYvrJABfBGxKMzDGKaQHXCxS8446VrxmVtmSpHm"
 			]
 		}
 	},

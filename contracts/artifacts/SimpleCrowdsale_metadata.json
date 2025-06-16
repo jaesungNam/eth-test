@@ -272,7 +272,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleCrowdSale.sol": "SimpleCrowdSale"
+			"contracts/SimpleCrowdSale.sol": "SimpleCrowdsale"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -311,11 +311,11 @@
 			]
 		},
 		"contracts/SimpleCrowdSale.sol": {
-			"keccak256": "0x46a3f6b20a831ecfc9260717cb39bae15e0b3b543089e7cdc779ce632ae57664",
+			"keccak256": "0xd67a707477521d5ccfe2d3d0bfa39f2efe3d234ce32178071bdbdef82269595f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://03f559c16035cedbdb3b615295ed56aa3079b87c9155ca1bef45d4efca82aeeb",
-				"dweb:/ipfs/QmRA1i9zTiFUh3ktkUycWSA3FpzbUzKLxpThiEjTxvc2oz"
+				"bzz-raw://b415eb54d9b82ee6c963c8cc0f3083c6af51fa0ecfb6f1d16e79551bfb536212",
+				"dweb:/ipfs/QmaXBRCm9R2LzKeoqhXFC5P5z5idbGB3Fi6yUQZ4o6zDCp"
 			]
 		}
 	},
