@@ -18,7 +18,7 @@ contract TranchePricingCrowdsale is SimpleCrowdSale {
             trancheStructure[0] = Tranche(3 ether, 0.002 ether);
             trancheStructure[1] = Tranche(5 ether, 0.003 ether);
             trancheStructure[2] = Tranche(10 ether, 0.004 ether);
-            trancheStructure[2] = Tranche(1000000000 ether, 0.005 ether);
+            trancheStructure[3] = Tranche(1000000000 ether, 0.005 ether);
             currentTrancheLevel = 0;
         }
 
