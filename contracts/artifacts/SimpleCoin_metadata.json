@@ -364,11 +364,11 @@
 			]
 		},
 		"contracts/SimpleCoin.sol": {
-			"keccak256": "0x031091ab86bbb9519186e0290b7505202d2fa688cca084e92cfd65d5aaac20dc",
+			"keccak256": "0x42cca7cca562541077259ca41fb96f515259bd4cfd1a63044f5feee41d737e53",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://34f9565e07554b859b47dd44567f070c9dbd7e0019030dca1ed1b7656933cca3",
-				"dweb:/ipfs/QmfR32ReZ195482Q9gy4FNnGhYWhhxEWhooLkMYM5PcPqg"
+				"bzz-raw://d9bdf89af956110e4f99acb9125336307a2f68f7b4386578bf2f9c5dcd9e4ee0",
+				"dweb:/ipfs/QmPVo1hH93Q5aU4iPyYMw4jKrSRsB8xzxpKuKfaEE14661"
 			]
 		}
 	},

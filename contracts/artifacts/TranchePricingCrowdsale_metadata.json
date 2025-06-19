@@ -345,6 +345,14 @@
 				"dweb:/ipfs/QmNaWsaG86zuSZ3s9tecjMeb5vjQjubmY5qMwVF6K4mp7h"
 			]
 		},
+		"contracts/ERC20.sol": {
+			"keccak256": "0x691b72c00fa748aeed985793127820547075261cba699148cedc8b1f32386418",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://76684adb4f215d5e409e221f41462ba9fc796f7b9455087676f2d48f3fcb2129",
+				"dweb:/ipfs/Qmd8pGzcHnD4dcuWkhFa1TfgJKMVaZQYv64w273rJB6pDM"
+			]
+		},
 		"contracts/FundingLimitStrategy.sol": {
 			"keccak256": "0x4d882b0b9fe84f9e9e66cc18c2b5d16cf3af4aaf1faf3bdae820a4038fe3bfc0",
 			"license": "MIT",
@@ -370,19 +378,19 @@
 			]
 		},
 		"contracts/ReleasableSimpleCoin.sol": {
-			"keccak256": "0xb4f35fc702e5108623c2d7505a41481df76a225ba93cb7a162f08cb270ec2bcb",
+			"keccak256": "0x63a16dc7d75f7dbab184f640ab3a6f6d05b38315d4b41e2b2afa198978d07820",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c9aad2de8a1c625b19ebfa6f52cb30f84f6b49ad6fea29b4b51f03d9b30d7821",
-				"dweb:/ipfs/Qmb7VVX6RA7kGyz7uthNuq1wYteH5XUvDQm4PKMHL5USuq"
+				"bzz-raw://6650e868f20c9fe9e53f66f7a490fbe37386cafc565ac4433bbf21ef819f4afb",
+				"dweb:/ipfs/QmerV6NXZpXFfX3RUcb1b8eCX4wdzmohuJpoiob3vKEqr2"
 			]
 		},
 		"contracts/SimpleCoin.sol": {
-			"keccak256": "0x1dff29859dabfdbb883dd53e52966702368dc5a267ea8807674500e7325e2bf5",
+			"keccak256": "0x031091ab86bbb9519186e0290b7505202d2fa688cca084e92cfd65d5aaac20dc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://48fdf63b20917a18933738db8210c303ac9afd0ffa1d9a03e392c509418b3b87",
-				"dweb:/ipfs/Qmdevembu8mg43DfFuaGHfb7npujBwtxY4WMSgAUpx3NVg"
+				"bzz-raw://34f9565e07554b859b47dd44567f070c9dbd7e0019030dca1ed1b7656933cca3",
+				"dweb:/ipfs/QmfR32ReZ195482Q9gy4FNnGhYWhhxEWhooLkMYM5PcPqg"
 			]
 		},
 		"contracts/SimpleCrowdSale.sol": {

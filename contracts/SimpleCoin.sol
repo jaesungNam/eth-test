@@ -13,8 +13,7 @@ contract SimpleCoin is Ownable, ERC20 {
 
     constructor(uint256 _initialSupply) {
         // coinBalance[0x14723A09ACff6D2A60DcdF7aA4AFf308FDDC160C] = 10000;
-        owner = msg.sender;
-        _totalSupply += _initialSupply;
+        owner = msg.sender;        
         mint(owner, _initialSupply);
     }
 
