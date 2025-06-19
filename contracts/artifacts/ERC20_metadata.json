@@ -6,17 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_initialSupply",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -39,25 +28,6 @@
 					}
 				],
 				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "target",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "bool",
-						"name": "frozen",
-						"type": "bool"
-					}
-				],
-				"name": "FrozenAccount",
 				"type": "event"
 			},
 			{
@@ -89,12 +59,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_authorizer",
+						"name": "owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_authorizedAccount",
+						"name": "spender",
 						"type": "address"
 					}
 				],
@@ -113,12 +83,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_authorizedAccount",
+						"name": "spender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_allowance",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -126,7 +96,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -137,7 +107,7 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_account",
+						"name": "account",
 						"type": "address"
 					}
 				],
@@ -145,95 +115,8 @@
 				"outputs": [
 					{
 						"internalType": "uint256",
-						"name": "balance",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "coinBalance",
-				"outputs": [
-					{
-						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "target",
-						"type": "address"
-					},
-					{
-						"internalType": "bool",
-						"name": "freeze",
-						"type": "bool"
-					}
-				],
-				"name": "freezeAccount",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "frozenAccount",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "_recipient",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_mintedAmount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -256,12 +139,12 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_amount",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -280,17 +163,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "_from",
+						"name": "from",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "_to",
+						"name": "to",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_amount",
+						"name": "amount",
 						"type": "uint256"
 					}
 				],
@@ -298,7 +181,7 @@
 				"outputs": [
 					{
 						"internalType": "bool",
-						"name": "success",
+						"name": "",
 						"type": "bool"
 					}
 				],
@@ -317,9 +200,37 @@
 			},
 			"kind": "dev",
 			"methods": {
+				"allowance(address,address)": {
+					"returns": {
+						"_0": "the remaining number of tokens that `spender` is allowed to spend on behalf of `owner`"
+					}
+				},
+				"approve(address,uint256)": {
+					"returns": {
+						"_0": "true if the approval succeeded"
+					}
+				},
+				"balanceOf(address)": {
+					"params": {
+						"account": "the address to query the balance of"
+					},
+					"returns": {
+						"_0": "the amount owned by `account`"
+					}
+				},
 				"totalSupply()": {
 					"returns": {
 						"_0": "the total amount of tokens in existence"
+					}
+				},
+				"transfer(address,uint256)": {
+					"returns": {
+						"_0": "true if the transfer succeeded"
+					}
+				},
+				"transferFrom(address,address,uint256)": {
+					"returns": {
+						"_0": "true if the transfer succeeded"
 					}
 				}
 			},
@@ -327,13 +238,23 @@
 		},
 		"userdoc": {
 			"kind": "user",
-			"methods": {},
+			"methods": {
+				"approve(address,uint256)": {
+					"notice": "Approves `spender` to spend `amount` on behalf of the caller"
+				},
+				"transfer(address,uint256)": {
+					"notice": "Transfers `amount` tokens to `to`"
+				},
+				"transferFrom(address,address,uint256)": {
+					"notice": "Moves `amount` tokens from `from` to `to` using the allowance mechanism"
+				}
+			},
 			"version": 1
 		}
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleCoin.sol": "SimpleCoin"
+			"contracts/ERC20.sol": "ERC20"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -353,22 +274,6 @@
 			"urls": [
 				"bzz-raw://76684adb4f215d5e409e221f41462ba9fc796f7b9455087676f2d48f3fcb2129",
 				"dweb:/ipfs/Qmd8pGzcHnD4dcuWkhFa1TfgJKMVaZQYv64w273rJB6pDM"
-			]
-		},
-		"contracts/Ownable.sol": {
-			"keccak256": "0x817d22d2d86e524ccddcffdb0ab853d05e33aca5d46ecaa9554e957c3946d403",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://5efb08d78d34dcc9fc585a295f9b2d6d8ab2de1eea5c93ca0768b09e65a31bd2",
-				"dweb:/ipfs/QmbSRgUzSWdFZbVZfecyfnTrk2mAqa7NYZ3MKkMomxXj5S"
-			]
-		},
-		"contracts/SimpleCoin.sol": {
-			"keccak256": "0x031091ab86bbb9519186e0290b7505202d2fa688cca084e92cfd65d5aaac20dc",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://34f9565e07554b859b47dd44567f070c9dbd7e0019030dca1ed1b7656933cca3",
-				"dweb:/ipfs/QmfR32ReZ195482Q9gy4FNnGhYWhhxEWhooLkMYM5PcPqg"
 			]
 		}
 	},

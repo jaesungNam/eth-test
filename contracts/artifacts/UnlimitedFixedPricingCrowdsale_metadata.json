@@ -6,6 +6,32 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_startTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_endTime",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weiTokenPrice",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_etherInvestmentObjective",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "payable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -70,19 +96,6 @@
 						"internalType": "contract ReleasableSimpleCoin",
 						"name": "",
 						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "currentTrancheLevel",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -253,30 +266,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "trancheStructure",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "weiHighLimit",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "weiTokenPrice",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "unpause",
 				"outputs": [],
@@ -323,7 +312,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TranchePricingCrowdsale.sol": "TranchePricingCrowdsale"
+			"contracts/Crowsale.sol": "UnlimitedFixedPricingCrowdsale"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -337,12 +326,28 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/Crowsale.sol": {
+			"keccak256": "0x233f06bf47b967b73292186c902b05621cace0feb5fac1c496dc19023f267d33",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c232ea899f7545359077bead8d51b90603e035366c7f8246d184d3ead15fb218",
+				"dweb:/ipfs/QmVVCr5JyGTKyaxaEbogng2VpRsd8LiBRZtyyLVwEiUsSu"
+			]
+		},
 		"contracts/Destructible.sol": {
 			"keccak256": "0x97467394affa2a46ba2464fec38c6b831fbd0319acaf48896a4f134c453fc02b",
 			"license": "MIT",
 			"urls": [
 				"bzz-raw://7b68f899e8079dfddaaedf2032270689077d270ecb0d60aa7b6bf4a53aee3bb5",
 				"dweb:/ipfs/QmNaWsaG86zuSZ3s9tecjMeb5vjQjubmY5qMwVF6K4mp7h"
+			]
+		},
+		"contracts/FixedPricingCrowdsale.sol": {
+			"keccak256": "0x709c255b9999050f1a3e8acf551c37302d5131c6088dfa196191130d3359757c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d8b6a6c16a5e80172092922d6e5f266121a3c5b623b9b31b5e26073689ceb3e4",
+				"dweb:/ipfs/Qma9ytoDXFAGfsoxoQvmNRkDr7BaiwSmRX5Qm2CkEdAgRr"
 			]
 		},
 		"contracts/FundingLimitStrategy.sol": {

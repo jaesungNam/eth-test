@@ -76,19 +76,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "currentTrancheLevel",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [
 					{
 						"internalType": "address",
@@ -253,30 +240,6 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "trancheStructure",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "weiHighLimit",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "weiTokenPrice",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "unpause",
 				"outputs": [],
@@ -323,7 +286,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/TranchePricingCrowdsale.sol": "TranchePricingCrowdsale"
+			"contracts/FixedPricingCrowdsale.sol": "FixedCrowedCrowdSale"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -345,12 +308,12 @@
 				"dweb:/ipfs/QmNaWsaG86zuSZ3s9tecjMeb5vjQjubmY5qMwVF6K4mp7h"
 			]
 		},
-		"contracts/FundingLimitStrategy.sol": {
-			"keccak256": "0x4d882b0b9fe84f9e9e66cc18c2b5d16cf3af4aaf1faf3bdae820a4038fe3bfc0",
+		"contracts/FixedPricingCrowdsale.sol": {
+			"keccak256": "0x3968d2ce89784138253ba053d0a69f4c868dc742311e83a6c6db9fb7918c1ccd",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://74614a4d10696813b50f50f98e54de790e889cc70c0f2d0a481adc707388a14c",
-				"dweb:/ipfs/QmT5EdJkX1Yf7BSkbgQSotd91Cb5hTVoK2DFq2SpJMUoQr"
+				"bzz-raw://604c4dd908b8e4dcd52e685858010c4d3a85bff0854f4f24dd4de555c90343a0",
+				"dweb:/ipfs/QmbxiJFLpHzbaGJQ1kfNzidXeMQ1JH84kED1acRxW1ydqx"
 			]
 		},
 		"contracts/Ownable.sol": {
@@ -383,22 +346,6 @@
 			"urls": [
 				"bzz-raw://48fdf63b20917a18933738db8210c303ac9afd0ffa1d9a03e392c509418b3b87",
 				"dweb:/ipfs/Qmdevembu8mg43DfFuaGHfb7npujBwtxY4WMSgAUpx3NVg"
-			]
-		},
-		"contracts/SimpleCrowdSale.sol": {
-			"keccak256": "0xa7ab98c97be621ca1127e53d2c08eebaa70a00f2cba611ff53fb6320afbab054",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://b4d093cc8dcc2f0b5559872534da7878f70462d87deb4432e5913db157aa60ec",
-				"dweb:/ipfs/QmeXu2A4KUYU3HFAtGE6NJdggFWRfHq7kVes3UePhGdC2P"
-			]
-		},
-		"contracts/TranchePricingCrowdsale.sol": {
-			"keccak256": "0x9b82d0227517bbc46600769ab4384408cae261dd2519c0f3695370a952f6da3e",
-			"license": "MIT",
-			"urls": [
-				"bzz-raw://cf48b336d7b3eb33ea64c092801855f4190ee4148b6902d6d86c3c3378eb7119",
-				"dweb:/ipfs/QmYTptoT3knNegtSf68SLDEhei1aBcWyUqWEooB3CEjFZJ"
 			]
 		}
 	},

@@ -131,6 +131,19 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "destroyAndSend",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "target",
 						"type": "address"
 					},
@@ -190,6 +203,26 @@
 						"internalType": "address",
 						"name": "",
 						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -261,6 +294,13 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -290,6 +330,14 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/Destructible.sol": {
+			"keccak256": "0x97467394affa2a46ba2464fec38c6b831fbd0319acaf48896a4f134c453fc02b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b68f899e8079dfddaaedf2032270689077d270ecb0d60aa7b6bf4a53aee3bb5",
+				"dweb:/ipfs/QmNaWsaG86zuSZ3s9tecjMeb5vjQjubmY5qMwVF6K4mp7h"
+			]
+		},
 		"contracts/Ownable.sol": {
 			"keccak256": "0x817d22d2d86e524ccddcffdb0ab853d05e33aca5d46ecaa9554e957c3946d403",
 			"license": "MIT",
@@ -298,12 +346,20 @@
 				"dweb:/ipfs/QmbSRgUzSWdFZbVZfecyfnTrk2mAqa7NYZ3MKkMomxXj5S"
 			]
 		},
-		"contracts/ReleasableSimpleCoin.sol": {
-			"keccak256": "0x5d39d6fea3a3cff9f28165ba37138a61b9d979735303c61a8d33f4729b9de86c",
+		"contracts/Pausable.sol": {
+			"keccak256": "0xee8f54ff1f1656a3f154e6c6151ab7c81024e67f80527b24df4f8152f5df7eee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f2637c1fc5b55c39c1d0bac1e10ac467cdb76e7e5d9f75320188d75908e6b0f",
-				"dweb:/ipfs/Qmbwi5drjUY4tzk8Nvq8drxY16pMZ6KkYy3TfWAWd84CJa"
+				"bzz-raw://65e5d30ba081135764cf0bc5e7f8d7b182f567fd2f21f0aec4e971fdaee5c2d1",
+				"dweb:/ipfs/QmWuYazbdhCCApSEiAXqgo8Wrbf5ki686Rzh7vGUmfnafw"
+			]
+		},
+		"contracts/ReleasableSimpleCoin.sol": {
+			"keccak256": "0xb4f35fc702e5108623c2d7505a41481df76a225ba93cb7a162f08cb270ec2bcb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c9aad2de8a1c625b19ebfa6f52cb30f84f6b49ad6fea29b4b51f03d9b30d7821",
+				"dweb:/ipfs/Qmb7VVX6RA7kGyz7uthNuq1wYteH5XUvDQm4PKMHL5USuq"
 			]
 		},
 		"contracts/SimpleCoin.sol": {

@@ -6,32 +6,6 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "_startTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_endTime",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_weiTokenPrice",
-						"type": "uint256"
-					},
-					{
-						"internalType": "uint256",
-						"name": "_etherInvestmentObjective",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -99,6 +73,19 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_recipient",
+						"type": "address"
+					}
+				],
+				"name": "destroyAndSend",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -214,6 +201,26 @@
 			},
 			{
 				"inputs": [],
+				"name": "pause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "paused",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "refund",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -230,6 +237,13 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "unpause",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -286,6 +300,22 @@
 		"remappings": []
 	},
 	"sources": {
+		"contracts/Destructible.sol": {
+			"keccak256": "0x97467394affa2a46ba2464fec38c6b831fbd0319acaf48896a4f134c453fc02b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7b68f899e8079dfddaaedf2032270689077d270ecb0d60aa7b6bf4a53aee3bb5",
+				"dweb:/ipfs/QmNaWsaG86zuSZ3s9tecjMeb5vjQjubmY5qMwVF6K4mp7h"
+			]
+		},
+		"contracts/FundingLimitStrategy.sol": {
+			"keccak256": "0x4d882b0b9fe84f9e9e66cc18c2b5d16cf3af4aaf1faf3bdae820a4038fe3bfc0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://74614a4d10696813b50f50f98e54de790e889cc70c0f2d0a481adc707388a14c",
+				"dweb:/ipfs/QmT5EdJkX1Yf7BSkbgQSotd91Cb5hTVoK2DFq2SpJMUoQr"
+			]
+		},
 		"contracts/Ownable.sol": {
 			"keccak256": "0x817d22d2d86e524ccddcffdb0ab853d05e33aca5d46ecaa9554e957c3946d403",
 			"license": "MIT",
@@ -294,12 +324,20 @@
 				"dweb:/ipfs/QmbSRgUzSWdFZbVZfecyfnTrk2mAqa7NYZ3MKkMomxXj5S"
 			]
 		},
-		"contracts/ReleasableSimpleCoin.sol": {
-			"keccak256": "0x5d39d6fea3a3cff9f28165ba37138a61b9d979735303c61a8d33f4729b9de86c",
+		"contracts/Pausable.sol": {
+			"keccak256": "0xee8f54ff1f1656a3f154e6c6151ab7c81024e67f80527b24df4f8152f5df7eee",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7f2637c1fc5b55c39c1d0bac1e10ac467cdb76e7e5d9f75320188d75908e6b0f",
-				"dweb:/ipfs/Qmbwi5drjUY4tzk8Nvq8drxY16pMZ6KkYy3TfWAWd84CJa"
+				"bzz-raw://65e5d30ba081135764cf0bc5e7f8d7b182f567fd2f21f0aec4e971fdaee5c2d1",
+				"dweb:/ipfs/QmWuYazbdhCCApSEiAXqgo8Wrbf5ki686Rzh7vGUmfnafw"
+			]
+		},
+		"contracts/ReleasableSimpleCoin.sol": {
+			"keccak256": "0xb4f35fc702e5108623c2d7505a41481df76a225ba93cb7a162f08cb270ec2bcb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c9aad2de8a1c625b19ebfa6f52cb30f84f6b49ad6fea29b4b51f03d9b30d7821",
+				"dweb:/ipfs/Qmb7VVX6RA7kGyz7uthNuq1wYteH5XUvDQm4PKMHL5USuq"
 			]
 		},
 		"contracts/SimpleCoin.sol": {
@@ -311,11 +349,11 @@
 			]
 		},
 		"contracts/SimpleCrowdSale.sol": {
-			"keccak256": "0x46a3f6b20a831ecfc9260717cb39bae15e0b3b543089e7cdc779ce632ae57664",
+			"keccak256": "0xa7ab98c97be621ca1127e53d2c08eebaa70a00f2cba611ff53fb6320afbab054",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://03f559c16035cedbdb3b615295ed56aa3079b87c9155ca1bef45d4efca82aeeb",
-				"dweb:/ipfs/QmRA1i9zTiFUh3ktkUycWSA3FpzbUzKLxpThiEjTxvc2oz"
+				"bzz-raw://b4d093cc8dcc2f0b5559872534da7878f70462d87deb4432e5913db157aa60ec",
+				"dweb:/ipfs/QmeXu2A4KUYU3HFAtGE6NJdggFWRfHq7kVes3UePhGdC2P"
 			]
 		}
 	},

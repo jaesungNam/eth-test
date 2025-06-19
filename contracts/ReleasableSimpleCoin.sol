@@ -1,8 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "./SimpleCoin.sol";
+import "./Pausable.sol";
+import "./Destructible.sol";
 
-contract ReleasableSimpleCoin is SimpleCoin {
+contract ReleasableSimpleCoin is SimpleCoin, Pausable, Destructible {
     bool public released = false;
 
     modifier isReleased() {
@@ -16,10 +18,6 @@ contract ReleasableSimpleCoin is SimpleCoin {
 
     function release() onlyOwner public {
         released = true;
-    }
-
-    function transfer(address _to, uint256 _amount) override isReleased public {
-        return super.transfer(_to, _amount);
     }
 
     function transferFrom(address _from, address _to, uint256 _amount) override isReleased public returns (bool success) {

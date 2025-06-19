@@ -1,9 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 import "./ReleasableSimpleCoin.sol";
-import "./Ownable.sol";
+import "./Pausable.sol";
+import "./Destructible.sol";
+import "./FundingLimitStrategy.sol";
 
-contract SimpleCrowdSale is Ownable {
+abstract contract SimpleCrowdSale is Pausable, Destructible {
     uint256 public startTime; // 크라우드세일 자금 조달 시작시간 (UNIX epoch)
     uint256 public endTime; // 크라우드세일 자금 조달 종료시간 (UNIX epoch)
     uint256 public weiTokenPrice; // 판매되는 토큰의 가격
@@ -17,6 +19,8 @@ contract SimpleCrowdSale is Ownable {
     bool public isRefundingAllowed; // 환불 가능 여부를 나타내는 플래그
     
     ReleasableSimpleCoin public crowdsaleToken; // 판매되는 토큰 컨트랙트 
+
+    FundingLimitStrategy internal fundingLimitStrategy;
 
     constructor(uint256 _startTime, uint256 _endTime, uint256 _weiTokenPrice, uint256 _etherInvestmentObjective) {
         require(_startTime >= block.timestamp);
@@ -33,6 +37,7 @@ contract SimpleCrowdSale is Ownable {
         isFinalized = false;
         isRefundingAllowed = false;
         owner = msg.sender;
+        fundingLimitStrategy = createFundingLimitStrategy();
     }
 
     event LogInvestment(address indexed investor, uint256 value);
@@ -57,7 +62,7 @@ contract SimpleCrowdSale is Ownable {
         // bool withinCrowdsalePeroid = block.timestamp > startTime && block.timestamp < endTime;
         bool withinCrowdsalePeroid = true;
 
-        return nonZeroInvestment && withinCrowdsalePeroid;
+        return nonZeroInvestment && withinCrowdsalePeroid && fundingLimitStrategy.isFullInvestmentWithinLimit(_investment, investmentReceived);
     }
 
     function assignTokens(address _beneficiary, uint256 _investment) internal {
@@ -71,9 +76,7 @@ contract SimpleCrowdSale is Ownable {
 
     // weiTokenPrice 가 100 이면 100wei === 1 SimpleCoin 임 
     // 어떤 투자자가 1000wei 투자하면 10 SimpleCoin 을 민팅받음
-    function calculateNumberOfTokens(uint256 _investment) virtual internal returns (uint256) {
-        return _investment / weiTokenPrice;        
-    }
+    function calculateNumberOfTokens(uint256 _investment) virtual internal returns (uint256);
 
     function finalize() onlyOwner public {
         if(isFinalized) revert();
@@ -108,4 +111,6 @@ contract SimpleCrowdSale is Ownable {
         if(!investor.send(investment)) revert(); // 
 
     }    
+
+    function createFundingLimitStrategy() virtual internal returns (FundingLimitStrategy);
 }

@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Destructible.sol": "Dest"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Destructible.sol": {
+			"keccak256": "0x3274d5fd60bb0ea07736d1e325b131e8b437da78bde84fd88be9d045ea96707e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1632fefd4502d4546c424189d19d46312e5bcc3311a9953ded4e8ff7bba0b413",
+				"dweb:/ipfs/QmRZaL2BtGAvX5Y7dwNX5ft6Wq2VePH5b8jxdNKS1VZTHq"
+			]
+		}
+	},
+	"version": 1
+}
